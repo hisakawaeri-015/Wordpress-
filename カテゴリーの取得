@@ -1,0 +1,26 @@
+get_the_category()	カテゴリー情報を取得する。
+is_category()	カテゴリー名を判定する。
+get_post_time()	投稿の公開日時を取得する。
+引数に’F’を設定すると、英語表記の月（Januaryなど）が取得できる。
+get_the_category()とis_category()は以下のように使用します。
+
+get_the_category()の記載例
+
+// カテゴリー情報を取得
+$cat = get_the_category();
+
+// カテゴリー情報からslug名を取得
+$catslug = $cat[0]->slug;
+
+// カテゴリー情報からカテゴリー名を取得
+$catname = $cat[0]->cat_name;
+
+Copy
+
+is_category()の記載例
+
+if( is_category('event') ) :
+  // カテゴリーがeventの場合の処理
+else:
+  // カテゴリーがevent以外の場合の処理
+endif;
