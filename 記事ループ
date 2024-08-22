@@ -1,0 +1,21 @@
+https://plugmize.jp/archives/blog/20170411_haveposts_getpost.html
+
+
+まず、記事ループは定石的なものがありますので、以下のコードをコピペして使ってください。
+
+一覧ページの場合（ループを伴う場合）
+1
+2
+3
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    ここに表示部分が入ります。
+<?php endwhile; endif; ?>
+ 
+
+単体ページの場合（ループを伴わない場合）
+1
+2
+3
+<?php if (have_posts()) : the_post(); ?>
+    ここに表示部分が入ります。
+<?php endif; ?>
