@@ -5,3 +5,8 @@ WordPressの場合は、データベースはMySQLという種類を、言語は
 
 WordPressの投稿の情報は、データベースのwp_postsテーブルに保管されています。
 それをsingle.phpというファイルでPHPを使ってデータを取得して処理をするという仕組みです。
+
+WordPressは動的サイトであり、ブラウザの要求に応じてデータベースから情報を取得しコンテンツを作成してブラウザに表示する
+WordPressでは、WordPress管理画面とコンテンツ表示画面の2種類ができる
+WordPressでは、WordPressによって生成されるWebページとファイル（テンプレートファイル）の対応関係や命名規則が決まっている
+WordPressのWebサイト制作は、wp-content > themesフォルダを使う
