@@ -10,3 +10,18 @@ WordPressは動的サイトであり、ブラウザの要求に応じてデー�
 WordPressでは、WordPress管理画面とコンテンツ表示画面の2種類ができる
 WordPressでは、WordPressによって生成されるWebページとファイル（テンプレートファイル）の対応関係や命名規則が決まっている
 WordPressのWebサイト制作は、wp-content > themesフォルダを使う
+
+go to folderからapp-public-wp-content-themesに作ったローカルディレクトリを置いて、テーマとして認識させる
+置いたフォルダを右クリックしてVSCodeを開く。できない場合はVSCodeを開いて「ファイルを開く」から
+1.index.htmlをindex.phpに名前変更
+2.フォルダ直下にstyle.cssを新規作成し、
+/*
+Theme Name: SAMURAI UNIVERSITY
+Theme URI: https://www.sejuku.net/
+Description: SAMURAI ENGINEERのWordPress教材
+Version: 1.0.0
+Author: SAMURAI ENGINEER
+Author URI: https://www.sejuku.net/
+*/
+をコピーペースト
+正しい情報に書き換える
