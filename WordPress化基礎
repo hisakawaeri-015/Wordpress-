@@ -1,0 +1,6 @@
+WordPress化とは、
+HTMLで静的にコーディングしたものを、style.cssとindex.phpに配置すること
+WordPressの場合は、データベースはMySQLという種類を、言語はPHPを使います。
+
+WordPressの投稿の情報は、データベースのwp_postsテーブルに保管されています。
+それをsingle.phpというファイルでPHPを使ってデータを取得して処理をするという仕組みです。
