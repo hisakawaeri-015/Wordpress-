@@ -1,0 +1,31 @@
+1.index.phpをコピーしてhome.phpを作成
+2.header.phpとfooter.phpを作成して、home.phpからヘッダーとフッターを切り取り、各phpにｺﾋﾟﾍﾟ
+3.header.phpの</head>の前に部品化に必要なコードを書く
+    <!-- 部品化に必須 -->
+    <?php wp_head(); ?>
+  </head>
+4.footer.phpの</body>の前に部品化に必要なコードを書く
+    <!-- 部品化に必要 -->
+    <?php wp_footer(); ?>
+  </body>
+</html>
+5.home.phpの切り取った場所に、それぞれheader.phpとfooter.phpを呼び出すコードを書く
+<?php get_header();?>
+<?php get_footer(); ?>
+6.home.php/header.php/footer.phpのパスを修正していく
+●=<?php echo get_template_directory_uri(); ?>/
+<img src="●images/icon2.png" alt="" />
+6.各ページに飛ぶリンクのパスを修正
+<li><a href="news.html">ニュース</a></li>
+<li><a href="events.html">イベント</a></li>
+<li><a href="courses.html">コース</a></li>
+<li><a href="about_us.html">侍大学について</a></li>
+↓
+<li><a href="<?php echo home_url(); ?>/category/news">ニュース</a></li>
+<li><a href="<?php echo home_url(); ?>/category/event">イベント</a></li>
+<li><a href="<?php echo home_url(); ?>/course">コース</a></li>
+<li><a href="<?php echo home_url(); ?>/about_us">侍大学について</a></li>
+
+<?php echo home_url(); ?>/
+
+こんな具合に
