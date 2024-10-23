@@ -1,0 +1,6 @@
+get_posts()	投稿データの取得
+setup_postdata()	投稿データをセット
+get_permalink()	投稿データのパーマリンクを取得
+get_the_date()	投稿データの日付を取得
+the_title()	投稿データのタイトルを取得
+wp_reset_postdata()	使用した投稿データをリセット。ループ処理の後で実行する必要があります。ループとセットで利用する関数です。
