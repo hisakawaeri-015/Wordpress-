@@ -4,3 +4,31 @@ get_permalink()	投稿データのパーマリンクを取得
 get_the_date()	投稿データの日付を取得
 the_title()	投稿データのタイトルを取得
 wp_reset_postdata()	使用した投稿データをリセット。ループ処理の後で実行する必要があります。ループとセットで利用する関数です。
+
+<!-- ループ処理 -->
+             <?php foreach($posts as $post): ?>
+             <?php setup_postdata($post); ?>
+             <div class="news_post_small">
+               <div class="news_post_meta">
+                 <ul>
+                   <li>
+                     <!-- aタグで投稿記事へのリンクを作成 -->
+                     <a href="<?php echo get_permalink(); ?>">
+                       <!-- 日付を出力する -->
+                       <?php echo get_the_date(); ?>
+                     </a>
+                   </li>
+                 </ul>
+               </div>
+               <div class="news_post_small_title">
+                 <!--  aタグで投稿記事へのリンクを作成する -->
+                 <a href="<?php the_permalink(); ?>">
+                   <!--  投稿記事のタイトルを表示する -->
+                   <?php the_title(); ?>
+                 </a>
+               </div>
+             </div>
+ 
+             <?php endforeach; ?>
+             <!-- 使用した投稿データをリセット -->
+             <?php wp_reset_postdata(); ?>
