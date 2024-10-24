@@ -1,0 +1,15 @@
+作成するファイルの冒頭に、以下のようにコメントアウトした箇所にTemplate Name:とTemplate Post Type:というものを追記します（詳細は後述）。
+
+<?php
+/*
+Template Name: 任意のテンプレート名(イベント投稿ページ)
+Template Post Type: 投稿タイプ名
+*/
+?>
+
+Template Name	カスタムページテンプレートの名前を設定します。
+Template Post Type	カスタムページテンプレートの投稿タイプを、以下のいずれかの中から指定します。
+
+・投稿：post
+・固定ページ：page
+・カスタム投稿タイプ：タイプ名（本教材の場合はcourse）
